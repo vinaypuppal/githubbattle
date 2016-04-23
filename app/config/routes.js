@@ -7,11 +7,13 @@ var hashHistory = ReactRouter.hashHistory;
 
 var Main = require('../components/Main');
 var Home = require('../components/Home');
-
+var PromtContainer = require('../containers/PromtContainer');
 var routes= (
 				<Router history={hashHistory}>
 					<Route path='/' component={Main} >
 						<IndexRoute component={Home} />
+						<Route path='/playerOne' header='PlayerOne' component={PromtContainer} />
+						<Route path='/playerTwo/:playerOne' header='PlayerTwo' component={PromtContainer} />
 					</Route>
 				</Router>
 			);
